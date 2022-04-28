@@ -17,7 +17,7 @@ public class MarkdownParseTest {
 
         ArrayList<String> forTest1 = new ArrayList<String>();
         forTest1.add("https://something.com");
-        forTest1.add("some-thing.html");
+        forTest1.add("some-thing");
         
         Path fileName = Path.of("test-file.md");
         String content = Files.readString(fileName);
