@@ -21,7 +21,16 @@ public class MarkdownParse {
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);    
             int closeParen = markdown.indexOf(")", openParen);
-            toReturn.add(markdown.substring(openParen + 1, closeParen));
+            //toReturn.add(markdown.substring(openParen + 1, closeParen));
+            String inParen = markdown.substring(openParen + 1, closeParen);
+            if(inParen.toLowerCase().endsWith(".jpg") || 
+                inParen.toLowerCase().endsWith(".png") ||
+                ! inParen.contains(".") || 
+                inParen.indexOf(".") == inParen.length()-1 
+                ) {}
+            else {
+                toReturn.add(inParen);
+            }
             currentIndex = closeParen + 1;
 
             
