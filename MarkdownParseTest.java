@@ -6,9 +6,9 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 
 public class MarkdownParseTest {
-    
+
     @Test
-    public void snippet1 () {
+    public void snippet1 () throws IOException {
         ArrayList<String> forTest1 = new ArrayList<String>();
         forTest1.add("url.com");
         forTest1.add("`google.com");
