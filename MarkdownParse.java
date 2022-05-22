@@ -9,19 +9,23 @@ import java.util.ArrayList;
 public class MarkdownParse {
 
     public static ArrayList<String> getLinks(String markdown) {
+        static final int nonexist = -1;
         ArrayList<String> toReturn = new ArrayList<>();
         // find the next [, then find the ], then find the (, then read link upto next )
         int currentIndex = 20;
         //System.out.println(markdown.length());
         while(currentIndex < markdown.length()) {
             int openBracket = markdown.indexOf("[", currentIndex);
-             if(openBracket == -1){
+             if(openBracket == nonexist){
                break;
             }
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);    
             int closeParen = markdown.indexOf(")", openParen);
-            //toReturn.add(markdown.substring(openParen + 1, closeParen));
+            if(closeParen == nonexist){
+                break;
+            }
+            
             String inParen = markdown.substring(openParen + 1, closeParen);
             if(inParen.toLowerCase().endsWith(".jpg") || 
                 inParen.toLowerCase().endsWith(".png") ||
