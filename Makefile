@@ -1,7 +1,7 @@
 # Makefile for MarkdownParse
 
 # Step 1: make MarkdownParse.class
-MarkdownParse.class: MarkdownParse.java
+MarkdownParse.class: MarkdownParse.class
 	javac MarkdownParse.java
 
 # Step 2: make MarkdownParseTest.class

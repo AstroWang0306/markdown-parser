@@ -8,11 +8,13 @@ import java.util.ArrayList;
 
 public class MarkdownParse {
 
+    static final int nonexist = -1;
+
     public static ArrayList<String> getLinks(String markdown) {
-        static final int nonexist = -1;
+       
         ArrayList<String> toReturn = new ArrayList<>();
         // find the next [, then find the ], then find the (, then read link upto next )
-        int currentIndex = 20;
+        int currentIndex = 0;
         //System.out.println(markdown.length());
         while(currentIndex < markdown.length()) {
             int openBracket = markdown.indexOf("[", currentIndex);
