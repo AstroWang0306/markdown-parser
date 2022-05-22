@@ -10,8 +10,8 @@ public class MarkdownParseTest {
     @Test
     public void snippet2 () throws IOException {
         ArrayList<String> forTest1 = new ArrayList<String>();
-        forTest1.add("b.com");
-        forTest1.add("`a,com(())");
+        forTest1.add("a.com"); //it's a nested link
+        forTest1.add("a.com(())");
         forTest1.add("example.com");
 
         Path fileName = Path.of("snippet2.md");
