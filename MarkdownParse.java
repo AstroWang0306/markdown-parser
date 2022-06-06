@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class MarkdownParse {
 
-    static final int nonexist = -1;
+    static final int nonexistent = -1;
 
     public static ArrayList<String> getLinks(String markdown) {
        
